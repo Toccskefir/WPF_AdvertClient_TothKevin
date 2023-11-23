@@ -1,0 +1,36 @@
+﻿<Window x:Class="WPF_AdvertClient.AdvertCreatorForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_AdvertClient"
+        mc:Ignorable="d"
+        Title="AdvertCreatorForm" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Orientation="Vertical" Grid.Column="0">
+            <Label Content="Hirdetés címe:" HorizontalAlignment="Right" Margin="0,10"/>
+            <Label Content="Hirdetés képe(url):" HorizontalAlignment="Right" Margin="0,10"/>
+            <Label Content="Hirdetés leírása:" HorizontalAlignment="Right" Margin="0,10"/>
+            <Label Content="Hirdetés ára(Ft):" HorizontalAlignment="Right" Margin="0,10"/>
+            <Label Content="Hirdető neve:" HorizontalAlignment="Right" Margin="0,10"/>
+            <Label Content="Terms And Conditions:" HorizontalAlignment="Right" Margin="0,10"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical" Grid.Column="1">
+            <TextBox x:Name="textBoxTitle" Margin="0, 15"/>
+            <TextBox x:Name="textBoxImage" Margin="0, 15"/>
+            <TextBox x:Name="textBoxDescription" Margin="0, 15"/>
+            <TextBox x:Name="textBoxPrice" Margin="0, 10"/>
+            <TextBox x:Name="textBoxSeller" Margin="0, 15"/>
+            <CheckBox x:Name="checkBoxTerms" Margin="0, 15"/>
+            
+            <Button x:Name="buttonCreateAdvert" Content="Hirdetés létrehozása" Width="200" Click="buttonCreateAdvert_Click"/>
+            <Button x:Name="buttonUpdateAdvert" Content="Hirdetés módosítása" Width="200" Visibility="Hidden" Click="buttonUpdateAdvert_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
